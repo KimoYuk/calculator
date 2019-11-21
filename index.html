@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            width: 400px;
+            margin: auto;
+            
+        }
+        div {
+            width: 400px;
+            justify-content: space-between;
+            display: flex;
+
+            
+        }
+        button {
+            width: 80px;
+        }
+        div+div{
+            margin-top: 10px;
+        }
+
+        input {
+            width: 190px;
+        }
+        .ans {
+            width: 400px;
+            margin-top: 10px;
+            border: 1px solid black;
+            height: 30px;
+            
+        }
+        .inp {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="inp">
+        <input id="first">
+        <input id="second">
+    </div>
+    <div>
+        <button id="plus">+</button>
+        <button id="minus">-</button>
+        <button id="mult">*</button>
+        <button id="div">/</button>
+    </div>
+    <div class="ans" id="answer">
+    </div>
+    <script>
+        'uses strict'
+        plus.addEventListener('click', function() {
+            answer.innerHTML=parseInt(first.value)+parseInt(second.value)
+        })
+        minus.addEventListener('click', function() {
+            answer.innerHTML=parseInt(first.value)-parseInt(second.value)
+        })
+        mult.addEventListener('click', function() {
+            answer.innerHTML=parseInt(first.value)*parseInt(second.value)
+        })
+        div.addEventListener('click', function() {
+            if (first.value == 0 && second.value==0) answer.innerHTML="VikaTop"
+            else if (second.value == 0) answer.innerHTML = "V+T"
+            else answer.innerHTML=parseInt(first.value)/parseInt(second.value)
+        })
+    </script>
+</body>
+</html>
